@@ -1,7 +1,7 @@
 <template>
     <MainHeader />
 
-    <Main>
+    <Main class="wrapper">
         <slot />
     </Main>
 

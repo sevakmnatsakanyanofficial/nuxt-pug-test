@@ -1,18 +1,19 @@
 
 <template>
     <Footer>
-        <div class="footer_container">
-            <div class="footer_container_row">
-                <div class="footer_container_row_col">
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col">
                     <Img src="/img/Logo.svg" />
                     <p class="footer_about">
                         Cтатьи о дизайне и искусстве, которые исследуют творческие вдохновения и актуальные тенденции, раскрывая мир эстетики и креативности
                     </p>
                 </div>
-                <div class="footer_container_row_col" style="padding-right: 78px;">
-                    <address>
-                        <span>email:</span><br>
-                        <a href="email:testblogsupport@gmail.com">testblogsupport@gmail.com</a>
+
+                <div class="col" style="padding-right: 78px;">
+                    <address class="contact-email">
+                        <span class="contact-email_label">email:</span><br>
+                        <a class="contact-email_data" href="email:testblogsupport@gmail.com">testblogsupport@gmail.com</a>
                     </address>
                     <div class="social">
                         <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -37,18 +38,20 @@
 <path d="M8.03117 14.3515C12.0577 12.5972 14.7427 11.4407 16.0861 10.8819C19.9219 9.28648 20.7189 9.00934 21.2384 9.00009C21.3527 8.99817 21.6082 9.02649 21.7737 9.16077C21.9134 9.27416 21.9518 9.42732 21.9702 9.53482C21.9886 9.64232 22.0115 9.88721 21.9933 10.0786C21.7855 12.2626 20.8861 17.5626 20.4285 20.0088C20.2349 21.0439 19.8536 21.3909 19.4845 21.4249C18.6824 21.4987 18.0734 20.8948 17.2965 20.3855C16.0809 19.5887 15.3941 19.0926 14.2141 18.315C12.8504 17.4164 13.7344 16.9224 14.5116 16.1152C14.715 15.904 18.249 12.6895 18.3174 12.3979C18.326 12.3614 18.3339 12.2255 18.2532 12.1537C18.1724 12.0819 18.0532 12.1065 17.9672 12.126C17.8453 12.1537 15.9033 13.4373 12.1411 15.9768C11.5899 16.3553 11.0906 16.5397 10.6433 16.5301C10.1501 16.5194 9.20146 16.2512 8.49623 16.022C7.63124 15.7408 6.94377 15.5921 7.00363 15.1146C7.03481 14.8659 7.37733 14.6115 8.03117 14.3515Z" fill="#FEFEFE"/>
 </svg>
 
-                    </div>
-                </div>        
+                    </div>     
+                </div>          
             </div>
 
-            <div class="footer_container_row bottom">
-                <div class="footer-text" style="margin-top: 7px;">
+            <div class="row footer-newslatter justify-content-between">
+                <div class="footer-newslatter_text" style="margin-top: 7px;">
                     Подпишись на рассылку
                 </div>
-                <div>
+                <div class="footer-newslatter_form">
                     <form>
-                        <input name="email" placeholder="Email" type="email">
-                        <button class="btn btn-subscribe">Подписаться</button>
+                        <input class="footer-newslatter_form_input" name="email" placeholder="Email" type="email">
+                        <UiArticleButton class="btn-blue" :link="'#'">
+                            Подписаться
+                        </UiArticleButton>
                     </form>
                 </div>
             </div>
@@ -65,92 +68,30 @@ import VkIcon from './public/img/vk.svg';
 footer {
     border-top: 1px solid #8D959C;
 
-    .footer_container {
-        padding: 50px 290px 0 290px;
+    .container {
+        padding-top: 50px;
+        padding-bottom: 0;
 
-        &_row {
-            display: flex;
-            justify-content: space-between;
+        .contact-email {
+            margin-top: 14px;
 
-            &_col {
-                > address {
-                    margin-top: 14px;
-
-                    > span {
-                        font-family: Montserrat;
-                        font-size: 14px;
-                        font-style: normal;
-                        font-weight: 400;
-                        line-height: 20px;
-                    }
-
-                    > a {
-                        font-family: Ubuntu;
-                        font-size: 18px;
-                        font-style: normal;
-                        font-weight: 400;
-                        line-height: 22px;
-                    }
-                }
+            &_label {
+                font-family: Montserrat;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 20px;
             }
+
+            &_data {
+                font-family: Ubuntu;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 22px;
+            }
+                
         }
-    }
-
-    .footer_about {
-        color: var(--muted-text-color);
-        font-family: Montserrat;
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 20px;
-        max-width: 426px;
-    }
-
-    .footer_container_row.bottom {
-        border-radius: 2px;
-        background-color: #1B1B1B;
-        padding: 27px 35px;
-        margin-top: 70px;
-    }
-
-    .footer-text {
-        color: #FEFEFE;
-        font-family: Montserrat;
-        font-size: 22px;
-        font-style: normal;
-        font-weight: 800;
-        line-height: 30px;
-    }
-
-    .btn-subscribe {
-        padding: 10px 50px;
-        justify-content: center;
-        border-radius: 2px;
-        background-color:#3657D3;
-        border: none;
-        color: #FEFEFE;
-        font-family: Montserrat;
-        font-size: 18px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 26px;
-    }
-
-    form input {
-        border: none;
-        margin-right: 37px;
-        background-color: inherit;
-        vertical-align: bottom;
-        border-bottom: 1px solid grey;
-        outline: none;
-        color: #FEFEFE;
-    }
-
-    form input:active, form input:focus, form input:focus-visible {
-        border: none;
-        background-color: inherit;
-        border-bottom: 1px solid grey;
-        outline: none;
     }
 
     .social {
@@ -162,6 +103,65 @@ footer {
             
             &:not(:last-child) {
                 margin-right: 20px;
+            }
+        }
+    }
+
+    img {
+        @media screen and (min-width: 576px) {
+            transform: translateX(-15px);
+        }
+    }
+
+    .footer_about {
+        color: var(--muted-text-color);
+        font-family: Montserrat;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px;
+        max-width: 426px;
+
+        @media screen and (min-width: 576px) {
+            transform: translateX(-15px);
+        }
+    }
+
+    .footer-newslatter {
+        border-radius: 2px;
+        background-color: #1B1B1B;
+        padding: 27px 35px;
+        margin-top: 70px;
+
+        &_text {
+            color: #FEFEFE;
+            font-family: Montserrat;
+            font-size: 22px;
+            font-style: normal;
+            font-weight: 800;
+            line-height: 30px;
+        }
+
+        &_form {
+            &_input {
+                border: none;
+                margin-right: 37px;
+                background-color: inherit;
+                vertical-align: bottom;
+                border-bottom: 1px solid grey;
+                outline: none;
+                color: #FEFEFE;
+
+                &:active, &:focus, &:focus-visible {
+                    border: none;
+                    background-color: inherit;
+                    border-bottom: 1px solid grey;
+                    outline: none;
+                }
+
+                &:active, &:focus, &:focus-visible {
+                    border-bottom-color: var(--btn-blue-color);
+                }
             }
         }
     }

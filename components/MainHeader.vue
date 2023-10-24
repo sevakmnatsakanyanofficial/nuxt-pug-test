@@ -13,5 +13,7 @@
 header {
     display: flex;
     justify-content: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
 }
 </style>
