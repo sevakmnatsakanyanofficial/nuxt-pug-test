@@ -1,6 +1,7 @@
 :root {
   --dark-color: #1B1B1B;
-  --muted-text-color: grey;
+  --grey-color: grey;
+  --muted-text-color: var(--grey-color);
   --btn-black-color: var(--dark-color);
   --btn-blue-color: #3657D3;
 }

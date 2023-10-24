@@ -2,10 +2,6 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: [
-    // '@pinia/nuxt', 
-    // 'bootstrap-vue/nuxt',
+    'vue3-carousel-nuxt'
   ],
-  // plugins: [
-  //   '@vitejs/plugin/bar/baz',
-  // ]
 })

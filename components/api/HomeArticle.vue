@@ -2,13 +2,11 @@
     <article class="article">
         <Img class="w-100 article_img" :src="article.image" />
         <h2 class="article_heading"> {{ article.title }} </h2>
-        <UiArticleButton class="btn-black article_button" :link="article.link">
+        <UiArticleButton class="btn-black article_button" exact :link="article.link">
             Читать
         </UiArticleButton>
     </article>
 </template>
-
-import { UiArticleButton } from '#build/components';
 
 <script setup>
 defineProps({

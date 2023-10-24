@@ -1,6 +1,6 @@
 
 <template>
-    <Footer>
+    <Footer class="footer">
         <div class="container">
             <div class="row justify-content-between">
                 <div class="col">
@@ -43,29 +43,18 @@
             </div>
 
             <div class="row footer-newslatter justify-content-between">
-                <div class="footer-newslatter_text" style="margin-top: 7px;">
-                    Подпишись на рассылку
-                </div>
-                <div class="footer-newslatter_form">
-                    <form>
-                        <input class="footer-newslatter_form_input" name="email" placeholder="Email" type="email">
-                        <UiArticleButton class="btn-blue" :link="'#'">
-                            Подписаться
-                        </UiArticleButton>
-                    </form>
-                </div>
+                <NewsLetterSubscribe />
             </div>
         </div>
     </Footer>
 </template>
 
 <script>
-import VkIcon from './public/img/vk.svg';
 
 </script>
 
 <style lang="scss">
-footer {
+.footer {
     border-top: 1px solid #8D959C;
 
     .container {
@@ -124,45 +113,6 @@ footer {
 
         @media screen and (min-width: 576px) {
             transform: translateX(-15px);
-        }
-    }
-
-    .footer-newslatter {
-        border-radius: 2px;
-        background-color: #1B1B1B;
-        padding: 27px 35px;
-        margin-top: 70px;
-
-        &_text {
-            color: #FEFEFE;
-            font-family: Montserrat;
-            font-size: 22px;
-            font-style: normal;
-            font-weight: 800;
-            line-height: 30px;
-        }
-
-        &_form {
-            &_input {
-                border: none;
-                margin-right: 37px;
-                background-color: inherit;
-                vertical-align: bottom;
-                border-bottom: 1px solid grey;
-                outline: none;
-                color: #FEFEFE;
-
-                &:active, &:focus, &:focus-visible {
-                    border: none;
-                    background-color: inherit;
-                    border-bottom: 1px solid grey;
-                    outline: none;
-                }
-
-                &:active, &:focus, &:focus-visible {
-                    border-bottom-color: var(--btn-blue-color);
-                }
-            }
         }
     }
 }

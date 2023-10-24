@@ -16,7 +16,11 @@ import axios from 'axios';
 import { ref, computed, onMounted } from 'vue';
 
 const articlesData = ref({})
-const res = await axios.get('https://devtwit8.ru/api/v1/page/?path=/');
+const res = await axios.get('https://devtwit8.ru/api/v1/page/', {
+    params: {
+        path: '/'
+    }
+});
 const data = res.data;
 articlesData.value = data.body[0].data;
 
