@@ -8,7 +8,7 @@
 
 .wrapper {
   padding-top: 30px;
-  padding-bottom: 200px;
+  padding-bottom: 100px;
   min-height: 100%;
   height: 100%;
 }
@@ -42,5 +42,30 @@
   &:hover {
     background-color: var(--btn-blue-color);
     color: #FEFEFE;
+  }
+}
+
+.form-input {
+  border: none;
+  margin-right: 37px;
+  background-color: inherit;
+  vertical-align: bottom;
+  border-bottom: 1px solid var(--grey-color);
+  outline: none;
+  color: #FEFEFE;
+
+  &:active,
+  &:focus,
+  &:focus-visible {
+    border: none;
+    background-color: inherit;
+    border-bottom: 1px solid var(--grey-color);
+    outline: none;
+  }
+
+  &:active,
+  &:focus,
+  &:focus-visible {
+    border-bottom: 1px solid var(--btn-blue-color);
   }
 }

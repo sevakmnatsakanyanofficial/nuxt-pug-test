@@ -1,8 +1,8 @@
 <template>
     <article class="article">
-        <Img class="w-100 article_img" :src="article.image" />
-        <h2 class="article_heading"> {{ article.title }} </h2>
-        <UiArticleButton class="btn-black article_button" exact :link="article.link">
+        <Img class="w-100 article_img" :src="data.image" />
+        <h2 class="article_heading"> {{ data.title }} </h2>
+        <UiArticleButton class="btn-black article_button" :link="data.link">
             Читать
         </UiArticleButton>
     </article>
@@ -10,7 +10,7 @@
 
 <script setup>
 defineProps({
-    article: {
+    data: {
         type: Object
     }
 })

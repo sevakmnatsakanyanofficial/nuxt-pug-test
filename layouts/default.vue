@@ -1,15 +1,15 @@
 <template>
-    <MainHeader />
+  <MainHeader />
 
-    <Main class="wrapper">
-        <slot />
-    </Main>
+  <Main class="wrapper">
+    <slot />
+  </Main>
 
-    <MainFooter />
+  <MainFooter />
 </template>
 
 <script>
-  import MainFooter from '../components/MainFooter.vue';
-  import MainHeader from '../components/MainHeader.vue';
+import MainFooter from '../components/MainFooter.vue';
+import MainHeader from '../components/MainHeader.vue';
 
 </script>

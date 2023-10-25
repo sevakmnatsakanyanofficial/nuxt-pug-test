@@ -6,7 +6,7 @@
 
         <div class="newsletter-subscribe_form">
             <form>
-                <input class="newsletter-subscribe_form_input" name="email" placeholder="Email" type="email">
+                <input class="form-input" name="email" placeholder="Email" type="email">
                 <UiArticleButton class="btn-blue" :link="'#'">
                     Подписаться
                 </UiArticleButton>
@@ -24,6 +24,7 @@
     padding: 35px 30px;
     color: #FEFEFE;
     width: 100%;
+    align-items: center;
 
     &_text {
         color: #FEFEFE;
@@ -32,29 +33,6 @@
         font-style: normal;
         font-weight: 800;
         line-height: 30px;
-    }
-
-    &_form {
-        &_input {
-            border: none;
-            margin-right: 37px;
-            background-color: inherit;
-            vertical-align: bottom;
-            border-bottom: 1px solid var(--grey-color);
-            outline: none;
-            color: #FEFEFE;
-
-            &:active, &:focus, &:focus-visible {
-                border: none;
-                background-color: inherit;
-                border-bottom: 1px solid var(--grey-color);
-                outline: none;
-            }
-
-            &:active, &:focus, &:focus-visible {
-                border-bottom: 1px solid var(--btn-blue-color);
-            }
-        }
     }
 }
 </style>

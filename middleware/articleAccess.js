@@ -1,3 +1,3 @@
-export default defineNuxtRouteMiddleware((to, from) => {
+export default ((to, from) => {
     return /^\d+$/.test(to.params.id);
 })
