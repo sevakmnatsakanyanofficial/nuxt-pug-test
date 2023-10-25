@@ -1,17 +1,15 @@
 
-<template>
-    <div class="cta-form">
-        <div class="cta-form_img"></div>
-        <div class="cta-form_form">
-            <h3 class="cta-form_form_heading">Стань участником проекта</h3>
-            <form>
-                <input class="form-input w-100" name="firstName" type="text" placeholder="Имя"><br>
-                <input class="form-input w-100" name="phone" type="text" placeholder="Телефон"><br>
-                <input class="form-input w-100" name="email" type="email" placeholder="Email"><br>
-                <UiArticleButton class="btn-blue">Присоединиться</UiArticleButton>
-            </form>
-        </div>
-    </div>
+<template lang="pug">
+div.cta-form
+    div.cta-form_img
+        
+    div.cta-form_form
+        h3.cta-form_form_heading Стань участником проекта
+        form
+            input.form-input.w-100(name="firstName" type="text" placeholder="Имя")
+            input.form-input.w-100(name="phone" type="text" placeholder="Телефон")
+            input.form-input.w-100(name="email" type="email" placeholder="Email")
+            UiArticleButton.btn-blue Присоединиться
 </template>
 
 <style lang="scss">

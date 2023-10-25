@@ -1,13 +1,10 @@
-<template>
-    <Carousel>
-        <Slide v-for="slide in data.data" :key="slide">
-            <Img :src="slide" class="carousel__item w-100" />
-        </Slide>
+<template lang="pug">
+Carousel
+    Slide(v-for="slide in data.data" :key="slide")
+        Img.carousel__item.w-100(:src="slide")
 
-        <template #addons>
-            <Navigation />
-        </template>
-    </Carousel>
+    template(#addons)
+        Navigation
 </template>
 
 <script setup>

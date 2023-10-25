@@ -1,11 +1,9 @@
-<template>
-    <article class="article">
-        <Img class="w-100 article_img" :src="data.image" />
-        <h2 class="article_heading"> {{ data.title }} </h2>
-        <UiArticleButton class="btn-black article_button" :link="data.link">
-            Читать
-        </UiArticleButton>
-    </article>
+<template lang="pug">
+article.article
+    Img.w-100.article_img(:src="data.image")
+    h2.article_heading {{ data.title }}
+    UiArticleButton.btn-black.article_button(:link="data.link")
+        |Читать
 </template>
 
 <script setup>

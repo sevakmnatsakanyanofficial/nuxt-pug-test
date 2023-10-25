@@ -1,18 +1,12 @@
-<template>
-    <div class="newsletter-subscribe">
-        <div class="newsletter-subscribe_text">
-            Подпишись на рассылку
-        </div>
+<template lang="pug">
+div.newsletter-subscribe
+    div.newsletter-subscribe_text Подпишись на рассылку
 
-        <div class="newsletter-subscribe_form">
-            <form>
-                <input class="form-input" name="email" placeholder="Email" type="email">
-                <UiArticleButton class="btn-blue" :link="'#'">
-                    Подписаться
-                </UiArticleButton>
-            </form>
-        </div>
-    </div>
+    div.newsletter-subscribe_form
+        form
+            input.form-input(name="email" placeholder="Email" type="email")
+            UiArticleButton.btn-blue(:link="'#'")
+                |Подписаться
 </template>
 
 <style lang="scss">

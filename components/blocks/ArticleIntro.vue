@@ -1,20 +1,15 @@
-<template>
-    <div class="row">
-        <div class="col-12 col-md-5">
-            <Img class="article_intro_block_img w-100" :src="data.data.image" />
-        </div>
-        <div class="col-12 col-md-7">
-            <h1 class="article_intro_block_heading">{{ data.data.title }}</h1>
-            <small class="article_intro_block_info">
-                {{ data.data.reading_time }} мин на чтение
-                <br>
-                {{ data.data.views_count }} прочитали статью
-            </small>
-            <p class="article_intro_block_description">
-                {{ data.data.short_description }}
-            </p>
-        </div>
-    </div>
+<template lang="pug">
+div.row
+    div.col-12.col-md-5
+        Img.article_intro_block_img.w-100(:src="data.data.image")
+
+    div.col-12.col-md-7
+        h1.article_intro_block_heading {{ data.data.title }}
+        small.article_intro_block_info
+            |{{ data.data.reading_time }} мин на чтение
+            br 
+            |{{ data.data.views_count }} прочитали статью
+        p.article_intro_block_description {{ data.data.short_description }}
 </template>
 
 <script setup>

@@ -12,7 +12,8 @@
   "devDependencies": {
     "@nuxt/devtools": "latest",
     "nuxt": "^3.8.0",
-    "vite-plugin-pug": "^0.3.2",
+    "pug": "^3.0.2",
+    "pug-plain-loader": "^1.1.0",
     "vue": "^3.3.6",
     "vue-router": "^4.2.5"
   },
