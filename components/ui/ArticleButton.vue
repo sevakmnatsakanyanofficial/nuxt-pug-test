@@ -1,5 +1,5 @@
 <template>
-    <NuxtLink :to="link" class="btn">
+    <NuxtLink :to="link" class="btn" no-prefetch="">
         <slot />
     </NuxtLink>
 </template>
